@@ -214,6 +214,13 @@ plot_umap_labeled <- function(seurat_obj, label_col = "cluster_names", title = "
 plot_umap_labeled(seurat_obj)
 
 ## 3.4 Expansion 
+seurat_obj$condi <- case_when(
+  seurat_obj$condition %in% "IRAE" ~ "IrAE",
+  seurat_obj$condition %in% "Normal" ~ "Control",
+  seurat_obj$condition %in% "HT" ~ "other",
+  TRUE ~ NA_character_
+)
+
 pt_col        <- "sample"
 condition_col <- "condi"
 cluster_col   <- "cluster_names"
