@@ -405,7 +405,7 @@ plots
 
 ## 3.5 statistics
 sample_col    <- "sample"
-condition_col <- "Condi"
+condition_col <- "condi"
 cluster_col   <- "cluster_names"
 
 cond_A        <- "control"   
